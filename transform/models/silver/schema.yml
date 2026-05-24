@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_eudragmdp
+    description: "Cleansed and deduplicated staging model for EudraGMDP data."
+    columns:
+      - name: document_reference_number
+        description: "The reference number of the document."
+      - name: certificate_number
+        description: "The certificate number."
+      - name: document_type
+        description: "The type of the document (e.g., Non-Compliance Report)."
+        tests:
+          - not_null
+      - name: oms_location_id
+        description: "OMS Location Identifier for the site."
+      - name: duns_number
+        description: "DUNS Number for the site."
+      - name: _ingested_at
+        description: "Timestamp when the record was ingested into the bronze layer."
+        tests:
+          - not_null
+      - name: _source_file
+        description: "The source file from which the record was loaded."
+        tests:
+          - not_null

@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:15
+    container_name: qualifyze_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: qualifyze_user
+      POSTGRES_PASSWORD: qualifyze_password
+      POSTGRES_DB: qualifyze_dw
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qualifyze_user -d qualifyze_dw"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  data_pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host  # Crucial para heredar la conexión VPN/WARP durante el build
+    container_name: qualifyze_pipeline
+    depends_on:
+      db:
+        condition: service_healthy
+    network_mode: host  # Evita que la VPN/WARP intercepte el ruteo entre contenedores
+    environment:
+      - DB_URL=postgresql://qualifyze_user:qualifyze_password@127.0.0.1:5432/qualifyze_dw
+      - DBT_HOST=127.0.0.1
+    volumes:
+      - .:/app
+    # Ejecuta la ingesta y luego las transformaciones de dbt
+    command: >
+      sh -c "python ingestion/load_bronze.py && 
+             cd transform && 
+             dbt run --profiles-dir . &&
+             dbt test --profiles-dir ."
+
+volumes:
+  postgres_data:
+  

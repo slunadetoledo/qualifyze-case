@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+*.pyc
+transform/target/
+transform/dbt_packages/
+.vscode/

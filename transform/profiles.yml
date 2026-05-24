@@ -1,0 +1,13 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'db') }}"
+      user: qualifyze_user
+      password: qualifyze_password
+      port: 5432
+      dbname: qualifyze_dw
+      schema: public
+      threads: 4
+      keepalives_idle: 0

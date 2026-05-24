@@ -1,0 +1,7 @@
+pandas
+openpyxl
+xlrd
+sqlalchemy
+psycopg2-binary
+dbt-postgres
+lxml
