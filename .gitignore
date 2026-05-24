@@ -5,3 +5,4 @@ __pycache__/
 transform/target/
 transform/dbt_packages/
 .vscode/
+transform/logs/
