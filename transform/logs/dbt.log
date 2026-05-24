@@ -7787,3 +7787,734 @@ where document_type is null
 [0m15:49:19.301399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e0e65d57950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e0e65e941d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e0e65e2c990>]}
 [0m15:49:19.302065 [debug] [MainThread]: Flushing usage events
 [0m15:49:19.790353 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:10:22.452285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bc82750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bed7f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bc83490>]}
+
+
+============================== 16:10:22.457038 | 601a7dcc-4706-4c6a-9e21-3c8420092711 ==============================
+[0m16:10:22.457038 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m16:10:22.457430 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'empty': 'False', 'profiles_dir': '.', 'log_cache_events': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --profiles-dir .', 'version_check': 'True', 'target_path': 'None', 'partial_parse': 'True', 'printer_width': '80', 'use_experimental_parser': 'False', 'warn_error': 'None', 'debug': 'False', 'log_path': '/app/transform/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'static_parser': 'True', 'fail_fast': 'False', 'write_json': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'introspect': 'True'}
+[0m16:10:22.588943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2afe0790>]}
+[0m16:10:22.635410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2ecd1610>]}
+[0m16:10:22.636239 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m16:10:22.725529 [debug] [MainThread]: checksum: 6c742f8123384b2cafbcdadbab6dccde814f82175174e3f0a0cf2a0d5a2925af, vars: {}, profile: default, target: dev, version: 1.12.0b1
+[0m16:10:22.827639 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m16:10:22.828072 [debug] [MainThread]: Partial parsing: added file: qualifyze_dbt://tests/assert_stg_eudragmdp_uniqueness.sql
+[0m16:10:22.828279 [debug] [MainThread]: Partial parsing: deleted file: qualifyze_dbt://models/silver/assert_stg_eudragmdp_uniqueness.sql
+[0m16:10:23.055655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2aba5450>]}
+[0m16:10:23.142772 [debug] [MainThread]: Wrote artifact WritableManifest to /app/transform/target/manifest.json
+[0m16:10:23.145134 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/transform/target/semantic_manifest.json
+[0m16:10:23.155481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bc837d0>]}
+[0m16:10:23.155952 [info ] [MainThread]: Found 4 models, 4 data tests, 1 source, 475 macros
+[0m16:10:23.156193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a29741a50>]}
+[0m16:10:23.157906 [info ] [MainThread]: 
+[0m16:10:23.158255 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:10:23.158489 [info ] [MainThread]: 
+[0m16:10:23.159016 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:10:23.162791 [debug] [ThreadPool]: Acquiring new postgres connection 'list_qualifyze_dw'
+[0m16:10:23.164205 [debug] [ThreadPool]: Acquiring new postgres connection 'list_qualifyze_dw'
+[0m16:10:23.205615 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw"
+[0m16:10:23.205920 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw"
+[0m16:10:23.206210 [debug] [ThreadPool]: On list_qualifyze_dw: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:10:23.206572 [debug] [ThreadPool]: On list_qualifyze_dw: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:10:23.206977 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:23.207315 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:23.219038 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.012 seconds
+[0m16:10:23.220154 [debug] [ThreadPool]: On list_qualifyze_dw: Close
+[0m16:10:23.220430 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.013 seconds
+[0m16:10:23.221415 [debug] [ThreadPool]: On list_qualifyze_dw: Close
+[0m16:10:23.223413 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_qualifyze_dw, now list_qualifyze_dw_public_silver)
+[0m16:10:23.224609 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_qualifyze_dw, now list_qualifyze_dw_public_gold)
+[0m16:10:23.229917 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw_public_silver"
+[0m16:10:23.232280 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw_public_gold"
+[0m16:10:23.232631 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw_public_silver"} */
+select
+      'qualifyze_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'qualifyze_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'qualifyze_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m16:10:23.232956 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw_public_gold"} */
+select
+      'qualifyze_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'qualifyze_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'qualifyze_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m16:10:23.233230 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:10:23.233492 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:10:23.243550 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.010 seconds
+[0m16:10:23.244679 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: ROLLBACK
+[0m16:10:23.245040 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:10:23.246137 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: ROLLBACK
+[0m16:10:23.246349 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: Close
+[0m16:10:23.247269 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: Close
+[0m16:10:23.251401 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:23.251787 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:10:23.252050 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:10:23.263614 [debug] [MainThread]: SQL status: SELECT 1 in 0.011 seconds
+[0m16:10:23.265376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a29741a50>]}
+[0m16:10:23.265728 [debug] [MainThread]: On master: ROLLBACK
+[0m16:10:23.266272 [debug] [MainThread]: On master: COMMIT
+[0m16:10:23.266504 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:23.266696 [debug] [MainThread]: On master: COMMIT
+[0m16:10:23.267411 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:10:23.267668 [debug] [MainThread]: On master: Close
+[0m16:10:23.271579 [debug] [Thread-1 (]: Began running node model.qualifyze_dbt.stg_eudragmdp
+[0m16:10:23.272389 [info ] [Thread-1 (]: 1 of 3 START sql view model public_silver.stg_eudragmdp ........................ [RUN]
+[0m16:10:23.272758 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_qualifyze_dw_public_silver, now model.qualifyze_dbt.stg_eudragmdp)
+[0m16:10:23.273087 [debug] [Thread-1 (]: Began compiling node model.qualifyze_dbt.stg_eudragmdp
+[0m16:10:23.279421 [debug] [Thread-1 (]: Writing injected SQL for node "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.280063 [debug] [Thread-1 (]: Began executing node model.qualifyze_dbt.stg_eudragmdp
+[0m16:10:23.312744 [debug] [Thread-1 (]: Writing runtime sql for node "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.313357 [debug] [Thread-1 (]: Using postgres connection "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.313718 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.stg_eudragmdp"} */
+
+  create view "qualifyze_dw"."public_silver"."stg_eudragmdp__dbt_tmp"
+    
+    
+  as (
+    
+
+with source as (
+    select * from "qualifyze_dw"."bronze"."raw_eudragmdp"
+),
+
+renamed_and_casted as (
+    select
+        -- Identificadores (limpieza de espacios)
+        -- Las columnas ya se han normalizado a snake_case mediante el script de ingesta (load_bronze.py)
+        trim(cast(document_reference_number as varchar)) as document_reference_number,
+        trim(cast(certificate_number as varchar)) as certificate_number,
+        trim(cast(oms_organisation_id as varchar)) as oms_organisation_id,
+        trim(cast(oms_location_id as varchar)) as oms_location_id,
+        trim(cast(duns_number as varchar)) as duns_number,
+        
+        -- Datos del sitio
+        trim(cast(site_name as varchar)) as site_name,
+        trim(cast(postcode as varchar)) as postcode,
+        trim(cast(document_type as varchar)) as document_type,
+        
+        -- Parseo de fechas (Asumiendo que pandas las importó como texto o timestamp)
+        cast(inspection_end_date as date) as inspection_end_date,
+        cast(issue_date as date) as issue_date,
+        
+        -- Metadatos de la ingesta
+        _ingested_at,
+        _source_file
+    from source
+),
+
+deduplicated_updates as (
+    select
+        *,
+        -- Si un mismo documento se actualiza en diferentes archivos XLS con el tiempo,
+        -- hacemos un 'Upsert lógico' quedándonos solo con el más reciente
+        row_number() over (
+            partition by coalesce(document_reference_number, certificate_number)
+            order by _ingested_at desc
+        ) as rn
+    from renamed_and_casted
+)
+
+select
+    document_reference_number,
+    certificate_number,
+    oms_organisation_id,
+    oms_location_id,
+    duns_number,
+    site_name,
+    postcode,
+    document_type,
+    inspection_end_date,
+    issue_date,
+    _ingested_at,
+    _source_file
+from deduplicated_updates
+where rn = 1
+  );
+[0m16:10:23.313994 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:10:23.325947 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m16:10:23.332614 [debug] [Thread-1 (]: Using postgres connection "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.332973 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.stg_eudragmdp"} */
+alter table "qualifyze_dw"."public_silver"."stg_eudragmdp" rename to "stg_eudragmdp__dbt_backup"
+[0m16:10:23.334094 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:10:23.336574 [debug] [Thread-1 (]: Using postgres connection "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.336873 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.stg_eudragmdp"} */
+alter table "qualifyze_dw"."public_silver"."stg_eudragmdp__dbt_tmp" rename to "stg_eudragmdp"
+[0m16:10:23.338041 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:10:23.351034 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: COMMIT
+[0m16:10:23.351383 [debug] [Thread-1 (]: Using postgres connection "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.351618 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: COMMIT
+[0m16:10:23.354959 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m16:10:23.360297 [debug] [Thread-1 (]: Applying DROP to: "qualifyze_dw"."public_silver"."stg_eudragmdp__dbt_backup"
+[0m16:10:23.364331 [debug] [Thread-1 (]: Using postgres connection "model.qualifyze_dbt.stg_eudragmdp"
+[0m16:10:23.364679 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.stg_eudragmdp"} */
+drop view if exists "qualifyze_dw"."public_silver"."stg_eudragmdp__dbt_backup" cascade
+[0m16:10:23.367912 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m16:10:23.370272 [debug] [Thread-1 (]: On model.qualifyze_dbt.stg_eudragmdp: Close
+[0m16:10:23.371966 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a284b4b90>]}
+[0m16:10:23.372590 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public_silver.stg_eudragmdp ................... [[32mCREATE VIEW[0m in 0.10s]
+[0m16:10:23.373058 [debug] [Thread-1 (]: Finished running node model.qualifyze_dbt.stg_eudragmdp
+[0m16:10:23.374237 [debug] [Thread-3 (]: Began running node model.qualifyze_dbt.dim_sites
+[0m16:10:23.374573 [debug] [Thread-4 (]: Began running node model.qualifyze_dbt.mart_ncr_alerts
+[0m16:10:23.374961 [info ] [Thread-3 (]: 2 of 3 START sql table model public_gold.dim_sites ............................. [RUN]
+[0m16:10:23.375397 [info ] [Thread-4 (]: 3 of 3 START sql table model public_gold.mart_ncr_alerts ....................... [RUN]
+[0m16:10:23.376075 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.qualifyze_dbt.dim_sites'
+[0m16:10:23.376569 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.qualifyze_dbt.mart_ncr_alerts'
+[0m16:10:23.376862 [debug] [Thread-3 (]: Began compiling node model.qualifyze_dbt.dim_sites
+[0m16:10:23.377095 [debug] [Thread-4 (]: Began compiling node model.qualifyze_dbt.mart_ncr_alerts
+[0m16:10:23.380091 [debug] [Thread-3 (]: Writing injected SQL for node "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.384436 [debug] [Thread-4 (]: Writing injected SQL for node "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.385425 [debug] [Thread-4 (]: Began executing node model.qualifyze_dbt.mart_ncr_alerts
+[0m16:10:23.386046 [debug] [Thread-3 (]: Began executing node model.qualifyze_dbt.dim_sites
+[0m16:10:23.414636 [debug] [Thread-4 (]: Writing runtime sql for node "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.418343 [debug] [Thread-3 (]: Writing runtime sql for node "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.419100 [debug] [Thread-4 (]: Using postgres connection "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.419465 [debug] [Thread-3 (]: Using postgres connection "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.419770 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.mart_ncr_alerts"} */
+
+  
+    
+
+  create  table "qualifyze_dw"."public_gold"."mart_ncr_alerts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with staging as (
+    select * from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+),
+
+ncr_reports as (
+    select
+        document_reference_number,
+        document_type,
+        oms_location_id,
+        duns_number,
+        site_name,
+        issue_date,
+        _ingested_at
+    from staging
+    -- Filtrar solo los reportes de no cumplimiento (NCR)
+    where document_type = 'Non-Compliance Report'
+      and document_reference_number is not null
+)
+
+select * from ncr_reports
+  );
+  
+[0m16:10:23.420102 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.dim_sites"} */
+
+  
+    
+
+  create  table "qualifyze_dw"."public_gold"."dim_sites__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with staging as (
+    select * from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+),
+
+deduplicated_sites as (
+    select
+        -- Generamos una clave maestra unificada basada en la disponibilidad de IDs
+        coalesce(oms_location_id, duns_number, 'UNKNOWN') as site_master_id,
+        oms_location_id,
+        duns_number,
+        oms_organisation_id,
+        site_name,
+        postcode,
+        -- En caso de duplicados, tomamos el registro más reciente según la fecha de inspección
+        row_number() over (
+            partition by coalesce(oms_location_id, duns_number, 'UNKNOWN') 
+            order by issue_date desc
+        ) as rn
+    from staging
+    where oms_location_id is not null or duns_number is not null
+)
+
+select
+    site_master_id,
+    oms_location_id,
+    duns_number,
+    oms_organisation_id,
+    site_name,
+    postcode
+from deduplicated_sites 
+where rn = 1
+  );
+  
+[0m16:10:23.420406 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:10:23.420679 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:10:23.434595 [debug] [Thread-4 (]: SQL status: SELECT 0 in 0.014 seconds
+[0m16:10:23.440293 [debug] [Thread-3 (]: SQL status: SELECT 41 in 0.020 seconds
+[0m16:10:23.440002 [debug] [Thread-4 (]: Using postgres connection "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.443979 [debug] [Thread-3 (]: Using postgres connection "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.444368 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.mart_ncr_alerts"} */
+alter table "qualifyze_dw"."public_gold"."mart_ncr_alerts" rename to "mart_ncr_alerts__dbt_backup"
+[0m16:10:23.444680 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.dim_sites"} */
+alter table "qualifyze_dw"."public_gold"."dim_sites" rename to "dim_sites__dbt_backup"
+[0m16:10:23.447024 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:10:23.447337 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:10:23.450255 [debug] [Thread-4 (]: Using postgres connection "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.453744 [debug] [Thread-3 (]: Using postgres connection "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.454250 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.mart_ncr_alerts"} */
+alter table "qualifyze_dw"."public_gold"."mart_ncr_alerts__dbt_tmp" rename to "mart_ncr_alerts"
+[0m16:10:23.454704 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.dim_sites"} */
+alter table "qualifyze_dw"."public_gold"."dim_sites__dbt_tmp" rename to "dim_sites"
+[0m16:10:23.455666 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m16:10:23.455961 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:10:23.457114 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: COMMIT
+[0m16:10:23.458217 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: COMMIT
+[0m16:10:23.458554 [debug] [Thread-3 (]: Using postgres connection "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.458894 [debug] [Thread-4 (]: Using postgres connection "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.459446 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: COMMIT
+[0m16:10:23.459872 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: COMMIT
+[0m16:10:23.463335 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m16:10:23.464054 [debug] [Thread-4 (]: SQL status: COMMIT in 0.004 seconds
+[0m16:10:23.466081 [debug] [Thread-3 (]: Applying DROP to: "qualifyze_dw"."public_gold"."dim_sites__dbt_backup"
+[0m16:10:23.468426 [debug] [Thread-4 (]: Applying DROP to: "qualifyze_dw"."public_gold"."mart_ncr_alerts__dbt_backup"
+[0m16:10:23.471974 [debug] [Thread-3 (]: Using postgres connection "model.qualifyze_dbt.dim_sites"
+[0m16:10:23.472920 [debug] [Thread-4 (]: Using postgres connection "model.qualifyze_dbt.mart_ncr_alerts"
+[0m16:10:23.473353 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.dim_sites"} */
+drop table if exists "qualifyze_dw"."public_gold"."dim_sites__dbt_backup" cascade
+[0m16:10:23.473651 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "model.qualifyze_dbt.mart_ncr_alerts"} */
+drop table if exists "qualifyze_dw"."public_gold"."mart_ncr_alerts__dbt_backup" cascade
+[0m16:10:23.476062 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m16:10:23.477280 [debug] [Thread-4 (]: On model.qualifyze_dbt.mart_ncr_alerts: Close
+[0m16:10:23.477690 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m16:10:23.478434 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a284e0f10>]}
+[0m16:10:23.479663 [debug] [Thread-3 (]: On model.qualifyze_dbt.dim_sites: Close
+[0m16:10:23.480256 [info ] [Thread-4 (]: 3 of 3 OK created sql table model public_gold.mart_ncr_alerts .................. [[32mSELECT 0[0m in 0.10s]
+[0m16:10:23.480983 [debug] [Thread-4 (]: Finished running node model.qualifyze_dbt.mart_ncr_alerts
+[0m16:10:23.481506 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '601a7dcc-4706-4c6a-9e21-3c8420092711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2af15490>]}
+[0m16:10:23.482275 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public_gold.dim_sites ........................ [[32mSELECT 41[0m in 0.11s]
+[0m16:10:23.482828 [debug] [Thread-3 (]: Finished running node model.qualifyze_dbt.dim_sites
+[0m16:10:23.484660 [debug] [MainThread]: On master: COMMIT
+[0m16:10:23.485378 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:23.485918 [debug] [MainThread]: On master: COMMIT
+[0m16:10:23.486270 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:10:23.494110 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m16:10:23.494443 [debug] [MainThread]: On master: Close
+[0m16:10:23.494769 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:10:23.494980 [debug] [MainThread]: Connection 'list_qualifyze_dw_public_gold' was properly closed.
+[0m16:10:23.495156 [debug] [MainThread]: Connection 'model.qualifyze_dbt.stg_eudragmdp' was properly closed.
+[0m16:10:23.495307 [debug] [MainThread]: Connection 'model.qualifyze_dbt.dim_sites' was properly closed.
+[0m16:10:23.495455 [debug] [MainThread]: Connection 'model.qualifyze_dbt.mart_ncr_alerts' was properly closed.
+[0m16:10:23.495738 [info ] [MainThread]: 
+[0m16:10:23.495956 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m16:10:23.496799 [debug] [MainThread]: Command end result
+[0m16:10:23.526161 [debug] [MainThread]: Wrote artifact WritableManifest to /app/transform/target/manifest.json
+[0m16:10:23.529044 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/transform/target/semantic_manifest.json
+[0m16:10:23.536971 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/transform/target/run_results.json
+[0m16:10:23.537352 [info ] [MainThread]: 
+[0m16:10:23.537803 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:10:23.538161 [info ] [MainThread]: 
+[0m16:10:23.538530 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m16:10:23.539702 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1377976, "process_in_blocks": "8", "process_kernel_time": 0.302341, "process_mem_max_rss": "134708", "process_out_blocks": "3168", "process_user_time": 2.346648}
+[0m16:10:23.540227 [debug] [MainThread]: Command `dbt run` succeeded at 16:10:23.540124 after 1.14 seconds
+[0m16:10:23.540593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2ca42650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bc94790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b3a2bc8ac90>]}
+[0m16:10:23.540963 [debug] [MainThread]: Flushing usage events
+[0m16:10:24.059907 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:10:25.958207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc5bf750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc5be6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc5bead0>]}
+
+
+============================== 16:10:25.963291 | ea7d3d98-1490-4bdd-901c-7fc381f27bf2 ==============================
+[0m16:10:25.963291 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m16:10:25.963712 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'debug': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'log_path': '/app/transform/logs', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'version_check': 'True', 'write_json': 'True', 'profiles_dir': '.', 'warn_error': 'None', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'quiet': 'False', 'use_colors': 'True', 'introspect': 'True', 'partial_parse': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False'}
+[0m16:10:26.095652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bb147450>]}
+[0m16:10:26.142809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bf611650>]}
+[0m16:10:26.143597 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m16:10:26.234211 [debug] [MainThread]: checksum: 6c742f8123384b2cafbcdadbab6dccde814f82175174e3f0a0cf2a0d5a2925af, vars: {}, profile: default, target: dev, version: 1.12.0b1
+[0m16:10:26.344485 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:10:26.344824 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:10:26.345002 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:10:26.388047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285ba5d82d0>]}
+[0m16:10:26.527648 [debug] [MainThread]: Wrote artifact WritableManifest to /app/transform/target/manifest.json
+[0m16:10:26.530135 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/transform/target/semantic_manifest.json
+[0m16:10:26.547025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bf1b1e50>]}
+[0m16:10:26.547444 [info ] [MainThread]: Found 4 models, 4 data tests, 1 source, 475 macros
+[0m16:10:26.547674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285ba5aeb10>]}
+[0m16:10:26.549289 [info ] [MainThread]: 
+[0m16:10:26.549629 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:10:26.549903 [info ] [MainThread]: 
+[0m16:10:26.550357 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:10:26.553708 [debug] [ThreadPool]: Acquiring new postgres connection 'list_qualifyze_dw_public_gold'
+[0m16:10:26.554456 [debug] [ThreadPool]: Acquiring new postgres connection 'list_qualifyze_dw_public_silver'
+[0m16:10:26.594280 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw_public_gold"
+[0m16:10:26.594572 [debug] [ThreadPool]: Using postgres connection "list_qualifyze_dw_public_silver"
+[0m16:10:26.594850 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw_public_gold"} */
+select
+      'qualifyze_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'qualifyze_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'qualifyze_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m16:10:26.595107 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "list_qualifyze_dw_public_silver"} */
+select
+      'qualifyze_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'qualifyze_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'qualifyze_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m16:10:26.595351 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:26.595570 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:10:26.607220 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.012 seconds
+[0m16:10:26.608383 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: ROLLBACK
+[0m16:10:26.608701 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.013 seconds
+[0m16:10:26.609763 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: ROLLBACK
+[0m16:10:26.610040 [debug] [ThreadPool]: On list_qualifyze_dw_public_gold: Close
+[0m16:10:26.610901 [debug] [ThreadPool]: On list_qualifyze_dw_public_silver: Close
+[0m16:10:26.615030 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:26.615394 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:10:26.615658 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:10:26.626656 [debug] [MainThread]: SQL status: SELECT 1 in 0.011 seconds
+[0m16:10:26.628258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea7d3d98-1490-4bdd-901c-7fc381f27bf2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bca45950>]}
+[0m16:10:26.628616 [debug] [MainThread]: On master: ROLLBACK
+[0m16:10:26.629227 [debug] [MainThread]: On master: COMMIT
+[0m16:10:26.629464 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:26.629660 [debug] [MainThread]: On master: COMMIT
+[0m16:10:26.630323 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:10:26.630576 [debug] [MainThread]: On master: Close
+[0m16:10:26.634581 [debug] [Thread-1 (]: Began running node test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness
+[0m16:10:26.635338 [debug] [Thread-2 (]: Began running node test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747
+[0m16:10:26.636038 [debug] [Thread-3 (]: Began running node test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9
+[0m16:10:26.636495 [debug] [Thread-4 (]: Began running node test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638
+[0m16:10:26.636942 [info ] [Thread-1 (]: 1 of 4 START test assert_stg_eudragmdp_uniqueness .............................. [RUN]
+[0m16:10:26.637510 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_eudragmdp__ingested_at .......................... [RUN]
+[0m16:10:26.638280 [info ] [Thread-3 (]: 3 of 4 START test not_null_stg_eudragmdp__source_file .......................... [RUN]
+[0m16:10:26.638687 [info ] [Thread-4 (]: 4 of 4 START test not_null_stg_eudragmdp_document_type ......................... [RUN]
+[0m16:10:26.639331 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_qualifyze_dw_public_silver, now test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness)
+[0m16:10:26.639709 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_qualifyze_dw_public_gold, now test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747)
+[0m16:10:26.640181 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9'
+[0m16:10:26.640591 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638'
+[0m16:10:26.640895 [debug] [Thread-1 (]: Began compiling node test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness
+[0m16:10:26.641166 [debug] [Thread-2 (]: Began compiling node test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747
+[0m16:10:26.641644 [debug] [Thread-3 (]: Began compiling node test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9
+[0m16:10:26.642081 [debug] [Thread-4 (]: Began compiling node test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638
+[0m16:10:26.648458 [debug] [Thread-1 (]: Writing injected SQL for node "test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness"
+[0m16:10:26.662463 [debug] [Thread-2 (]: Writing injected SQL for node "test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747"
+[0m16:10:26.667930 [debug] [Thread-3 (]: Writing injected SQL for node "test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9"
+[0m16:10:26.672641 [debug] [Thread-4 (]: Writing injected SQL for node "test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638"
+[0m16:10:26.673821 [debug] [Thread-2 (]: Began executing node test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747
+[0m16:10:26.674458 [debug] [Thread-1 (]: Began executing node test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness
+[0m16:10:26.675264 [debug] [Thread-3 (]: Began executing node test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9
+[0m16:10:26.691490 [debug] [Thread-2 (]: Writing runtime sql for node "test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747"
+[0m16:10:26.691986 [debug] [Thread-4 (]: Began executing node test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638
+[0m16:10:26.695120 [debug] [Thread-1 (]: Writing runtime sql for node "test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness"
+[0m16:10:26.697901 [debug] [Thread-3 (]: Writing runtime sql for node "test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9"
+[0m16:10:26.700553 [debug] [Thread-4 (]: Writing runtime sql for node "test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638"
+[0m16:10:26.701032 [debug] [Thread-2 (]: Using postgres connection "test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747"
+[0m16:10:26.701954 [debug] [Thread-2 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select _ingested_at
+from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+where _ingested_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:26.702233 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:10:26.702714 [debug] [Thread-1 (]: Using postgres connection "test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness"
+[0m16:10:26.703043 [debug] [Thread-3 (]: Using postgres connection "test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9"
+[0m16:10:26.703449 [debug] [Thread-4 (]: Using postgres connection "test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638"
+[0m16:10:26.703914 [debug] [Thread-1 (]: On test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Este test asegura que no haya documentos duplicados en la capa silver
+-- basándose en la clave principal que se utilizó para la deduplicación.
+
+
+
+with validation as (
+    select
+        coalesce(document_reference_number, certificate_number) as document_identifier,
+        count(*) as row_count
+    from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+    group by 1
+)
+
+select *
+from validation
+where row_count > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:26.704404 [debug] [Thread-3 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select _source_file
+from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+where _source_file is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:26.704800 [debug] [Thread-4 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "default", "target_name": "dev", "node_id": "test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select document_type
+from "qualifyze_dw"."public_silver"."stg_eudragmdp"
+where document_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:10:26.705161 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:10:26.705433 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:10:26.705787 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:10:26.710734 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m16:10:26.714084 [debug] [Thread-2 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747: ROLLBACK
+[0m16:10:26.714766 [debug] [Thread-2 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747: Close
+[0m16:10:26.715497 [info ] [Thread-2 (]: 2 of 4 PASS not_null_stg_eudragmdp__ingested_at ................................ [[32mPASS[0m in 0.08s]
+[0m16:10:26.716158 [debug] [Thread-2 (]: Finished running node test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747
+[0m16:10:26.717149 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:10:26.717625 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:10:26.717916 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m16:10:26.719014 [debug] [Thread-3 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9: ROLLBACK
+[0m16:10:26.720618 [debug] [Thread-4 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638: ROLLBACK
+[0m16:10:26.722101 [debug] [Thread-1 (]: On test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness: ROLLBACK
+[0m16:10:26.723733 [debug] [Thread-3 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9: Close
+[0m16:10:26.724249 [debug] [Thread-4 (]: On test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638: Close
+[0m16:10:26.724754 [debug] [Thread-1 (]: On test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness: Close
+[0m16:10:26.725571 [info ] [Thread-3 (]: 3 of 4 PASS not_null_stg_eudragmdp__source_file ................................ [[32mPASS[0m in 0.09s]
+[0m16:10:26.726393 [info ] [Thread-4 (]: 4 of 4 PASS not_null_stg_eudragmdp_document_type ............................... [[32mPASS[0m in 0.09s]
+[0m16:10:26.727567 [debug] [Thread-3 (]: Finished running node test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9
+[0m16:10:26.728139 [debug] [Thread-4 (]: Finished running node test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638
+[0m16:10:26.728809 [info ] [Thread-1 (]: 1 of 4 PASS assert_stg_eudragmdp_uniqueness .................................... [[32mPASS[0m in 0.09s]
+[0m16:10:26.729959 [debug] [Thread-1 (]: Finished running node test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness
+[0m16:10:26.731701 [debug] [MainThread]: On master: COMMIT
+[0m16:10:26.732097 [debug] [MainThread]: Using postgres connection "master"
+[0m16:10:26.732396 [debug] [MainThread]: On master: COMMIT
+[0m16:10:26.732877 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:10:26.741853 [debug] [MainThread]: SQL status: COMMIT in 0.009 seconds
+[0m16:10:26.742309 [debug] [MainThread]: On master: Close
+[0m16:10:26.742793 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:10:26.743035 [debug] [MainThread]: Connection 'test.qualifyze_dbt.not_null_stg_eudragmdp__ingested_at.a9c496e747' was properly closed.
+[0m16:10:26.743269 [debug] [MainThread]: Connection 'test.qualifyze_dbt.assert_stg_eudragmdp_uniqueness' was properly closed.
+[0m16:10:26.743485 [debug] [MainThread]: Connection 'test.qualifyze_dbt.not_null_stg_eudragmdp__source_file.6c5f8ea4e9' was properly closed.
+[0m16:10:26.743683 [debug] [MainThread]: Connection 'test.qualifyze_dbt.not_null_stg_eudragmdp_document_type.7ae2671638' was properly closed.
+[0m16:10:26.744023 [info ] [MainThread]: 
+[0m16:10:26.744472 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m16:10:26.745930 [debug] [MainThread]: Command end result
+[0m16:10:26.778946 [debug] [MainThread]: Wrote artifact WritableManifest to /app/transform/target/manifest.json
+[0m16:10:26.782698 [debug] [MainThread]: Wrote artifact SemanticManifest to /app/transform/target/semantic_manifest.json
+[0m16:10:26.790785 [debug] [MainThread]: Wrote artifact RunExecutionResult to /app/transform/target/run_results.json
+[0m16:10:26.791156 [info ] [MainThread]: 
+[0m16:10:26.791597 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:10:26.792038 [info ] [MainThread]: 
+[0m16:10:26.792496 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m16:10:26.793710 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.8861749, "process_in_blocks": "8", "process_kernel_time": 0.316142, "process_mem_max_rss": "132876", "process_out_blocks": "2184", "process_user_time": 2.126961}
+[0m16:10:26.794296 [debug] [MainThread]: Command `dbt test` succeeded at 16:10:26.794171 after 0.89 seconds
+[0m16:10:26.794693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc553e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc74d3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7285bc5d0a90>]}
+[0m16:10:26.795095 [debug] [MainThread]: Flushing usage events
+[0m16:10:27.272827 [debug] [MainThread]: An error was encountered while trying to flush usage events
