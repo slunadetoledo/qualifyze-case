@@ -45,13 +45,24 @@ Para que el proyecto funcione en cualquier entorno (incluyendo macOS), sigue est
     *(**Requirements**: Have Docker and Docker Compose installed.)*
 2.  **Preparación**: Coloca todos los archivos Excel (`.xls`, `.xlsx`) en la carpeta `data/`. Al menos debe haber 1 archivo. 
     *(**Preparation**: Place all Excel files (`.xls`, `.xlsx`) in the `data/` folder. There must be at least 1 file.)*
-3.  **Despliegue**: Ejecuta el siguiente comando en la raíz del proyecto: 
-    *(**Deployment**: Run the following command in the project root:)*
+3.  **Entorno Local**: Configura el entorno e instala las dependencias:
+    *(**Local Environment**: Configure the environment and install dependencies:)*
     ```bash
-    docker-compose up --build
+    # Crear entorno virtual
+    python3 -m venv .venv
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ## recomendacion instalar warp-cli y ejecutar warp-cli connect
     ```
-Este comando levantará el contenedor de la base de datos, ejecutará el script de carga de Python y aplicará los modelos de dbt automáticamente.
-*(This command will spin up the database container, execute the Python load script, and apply the dbt models automatically.)*
+4.  **Despliegue**: Inicia el servicio de Docker y levanta los contenedores: 
+    *(**Deployment**: Start the Docker service and spin up containers:)*
+    ```bash
+    # Arrancar docker
+    sudo systemctl start docker
+    docker-compose up --build -d
+    ```
+Este comando levantará el contenedor de la base de datos, ejecutará el script de carga de Python y aplicará los modelos de dbt automáticamente en segundo plano.
+*(This command will spin up the database container, execute the Python load script, and apply the dbt models automatically in the background.)*
 
 ---
 
